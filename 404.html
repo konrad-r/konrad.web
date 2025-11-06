@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 — Wracam na stronę główną…</title>
+<style>
+  :root {
+    --bg: #060d13;
+    --neon: #00eaff;
+    --text: #dff9ff;
+  }
+  html, body {
+    margin: 0; height: 100%;
+    display: grid; place-items: center;
+    background: radial-gradient(1200px 600px at 50% -10%, #0b1f2a 0%, var(--bg) 55%, #031017 100%);
+    color: var(--text);
+    font-family: system-ui, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  }
+  .wrap {
+    padding: 20px 30px;
+    border: 2px solid var(--neon);
+    border-radius: 12px;
+    box-shadow: 0 0 14px rgba(0,234,255,.55), inset 0 0 18px rgba(0,234,255,.25);
+    text-align: center;
+  }
+  a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--neon);
+  }
+</style>
+
+<div class="wrap">
+  <div>Ta strona nie istnieje.</div>
+  <div>Za chwilę wracam na landing…</div>
+  <div style="opacity:.6; margin-top:6px;">
+    Jeśli nic się nie stanie: <a href="/">Kliknij tutaj</a>
+  </div>
+</div>
+
+<meta http-equiv="refresh" content="2; url=/">
+<script>setTimeout(()=>location.replace("/"),2000);</script>
+</html>
